@@ -216,6 +216,7 @@ const dividess = (div1, div2) => {
     return div1 / div2;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(dividess(100, 5)); //function
 
 //ternary operator
@@ -319,4 +320,7 @@ console.log(spaceTest);
 =======
 console.log(dividess(100, 5));
 >>>>>>> 832cfda (functions practice js)
+=======
+console.log(dividess(100, 5)); //function
+>>>>>>> f9e1a98 (Resolved conflicts)
 
