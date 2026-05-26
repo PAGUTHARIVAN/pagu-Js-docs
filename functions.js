@@ -215,6 +215,7 @@ console.log(add1(20, 20));
 const dividess = (div1, div2) => {
     return div1 / div2;
 }
+<<<<<<< HEAD
 console.log(dividess(100, 5)); //function
 
 //ternary operator
@@ -315,4 +316,7 @@ console.log(checking);
 let spacex = 100;
 let spaceTest = (spacex >= 100) ? "sucessful launch" : "Launch failed";
 console.log(spaceTest);
+=======
+console.log(dividess(100, 5));
+>>>>>>> 832cfda (functions practice js)
 
