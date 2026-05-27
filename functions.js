@@ -217,3 +217,101 @@ const dividess = (div1, div2) => {
 }
 console.log(dividess(100, 5)); //function
 
+//ternary operator
+
+function isValidEmail(emailz) {
+    return emailz.includes("@") ? "valid email" : "invalid email";
+}
+console.log(isValidEmail("pagutharivan@gmail.com"));
+
+function checkAge(age1111) {
+    if (age1111 >= 20) {
+        return "you are an adult";
+    }
+    else {
+        return "you are a minor";
+    }
+}
+console.log(checkAge(20));
+
+function attendanceChecker(attendance) {
+    if (attendance >= 100) {
+        return "You have good attendance record.";
+    } else if (attendance >= 90) {
+        return "You have a decent attendance record.";
+    } else if (attendance >= 80) {
+        return "You have a poor attendance record.";
+    } else if (attendance >= 79) {
+        return "You have a very poor attendance record.";
+    } else if (attendance >= 78) {
+        return "You have a terrible attendance record.";
+    } else if (attendance >= 77) {
+        return "You have an extremely poor attendance record.";
+    } else if (attendance >= 76) {
+        return "You have an abysmal attendance record.";
+    } else if (attendance >= 75) {
+        return "You have a dismal attendance record.";
+    } else if (attendance >= 74) {
+        return "sorry, You're not eligible to attend the exam";
+
+    }
+}
+console.log(attendanceChecker(100));
+
+
+const day = (day) => {
+    if(day === "Monday") {
+        return "Today is the first day of the week";
+    } else {
+        return "Not normal day";
+    }
+}
+
+console.log(day("Monda"));
+//JavaScript Ternary operator
+//The ternary operator in JavaScript is a conditional operator that evaluates a condition and returns one of two values based on whether the condiiton is true or false. It simplifies decision-making in code, making it more concise and readable.
+let PMarks = 50;
+let resis = (PMarks > 39) ? "Pass" : "Fall";
+console.log(resis);
+
+let eligibility = 18;
+let test = (eligibility > 18) ? "ELigibile for vote" : "Not eligilble!";
+console.log(test);
+
+let isHeEligible = true;
+let testE = (isHeEligible === true) ? "Yes he is eligible" : "No he is not eligible";
+console.log(testE);
+
+//imediate fu
+(function () {
+    console.log("Hello Js");
+})("welcome");
+
+//ternary operator syntas : condition ? trueExpression : falseExpression;
+
+//Nested Ternary Operators
+//The ternary operator can be nested, allowing you to perform multiple conditional checks in a single line of code. This technique is useful for replacing more complex if...else statements or switch statements, keeping the code compact and readable.
+let days = 3;
+let greeeting = (days === 1) ? 'Start of the week' :
+                (days === 2) ? 'Second day' :
+                (days === 3) ? 'Midweek' :
+                (days === 4) ? 'Almost weekend' : 'Weekend';
+
+console.log(greeeting);
+
+let marks = 100;
+let checking = (marks === 100) ? 'A+ Grade congratulations!!' :
+               (marks === 95) ? 'A Grade Well done!' :
+               (marks === 90) ? 'B+ Grade, You should study more!' :
+               (marks === 85) ? 'B Grade, Nice mark but Keep studying.' :
+               (marks === 80) ? 'C Grade, You must focus on studies' :
+               (marks === 75) ? 'D grade, Not well You should improve' :
+               (marks === 70) ? 'E grade, Sorry!' :
+
+               'Youre Fail';
+
+console.log(checking);
+
+let spacex = 100;
+let spaceTest = (spacex >= 100) ? "sucessful launch" : "Launch failed";
+console.log(spaceTest);
