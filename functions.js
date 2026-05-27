@@ -315,3 +315,4 @@ console.log(checking);
 let spacex = 100;
 let spaceTest = (spacex >= 100) ? "sucessful launch" : "Launch failed";
 console.log(spaceTest);
+
