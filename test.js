@@ -160,3 +160,101 @@ let colors = ["red", "green", "blue", "yellow", "green"];
 let indexOfColors = colors.indexOf("green", 3);
 console.log(indexOfColors);
 
+//removing the elements from the middle of the array
+let programms = ["JavaScript", "Python", "Java", "C++", "Rust", "Golang", "Ruby"];
+let programmsLength = programms.length;
+console.log(`Total Length of the array is : ${programmsLength}`);
+let removedElements = programms.splice(1, 4);
+console.log(`The removed elements from the array are: ${removedElements}`);
+console.log(`The remains : ${programms}`);
+
+let colors2 = ["red", "green", "blue"];
+colors2.splice(1, 0, "yellow", "purple");
+console.log(colors2);
+
+let numbers4 = [1, 2, 3, 4, 5];
+numbers4.splice(3, 2, 6, 7, 8);
+console.log(numbers4);
+
+let numbers5 = [1, 2, 3, 4, 5, 6];
+let removessss = numbers5.splice(1, 4, 9, 10, 11, 12);
+console.log(numbers5);
+console.log(removessss);
+
+let numbers6 = [1, 2, 3, 4, 5, 6];
+let addss = numbers6.splice(1, 0, 9, 10, 11, 12);
+console.log(numbers6);
+console.log(addss);
+
+let originalA = [1, 2, 3, 4, 5];
+let copy = [...originalA];
+copy.splice(2, 1, 6);
+
+console.log(originalA);
+console.log(copy);
+
+let containers = ["box", "bag", "bottle", "can"];
+let findone = containers.indexOf("bottle");
+console.log(findone); //ouput : 2
+
+if (findone !== -1) {
+    containers.splice(findone, 1);
+}
+console.log(containers);
+
+ //JavaScript arrays Basics
+ //A javascruot array is an ordered collection of values, each identified by a numeric index> The values in a JavaScript array can be of different data types, including numbers, strings, booleans, objects, and even other arrays Arrays are contiguous in memory, which means that all elements are stored in a single, continuous block of memory locations, allowing for efficient indexing and fast access to elements by their index.
+
+ const arr = ["apple", "banana", "cherry", "date"];
+ const sliceArr = arr.slice(1, 3);
+    console.log(sliceArr);
+
+let arrr = [];
+arrr.shift();
+console.log(arrr);
+
+//JavaScript Arrays Review//
+//Creating an array
+let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+console.log(myArr);
+//Accessing elements in an array
+console.log(myArr[0]);
+let accessRemovedLast = myArr.pop();
+let accessRemovedFirst = myArr.shift();
+console.log(`This is removed from the array : ${accessRemovedFirst}`);
+console.log(`This is removed from the array : ${accessRemovedLast}`);
+console.log(myArr);
+
+let accessAddedLast = myArr.push(21, 22, 23, 24, 25);
+console.log(accessAddedLast);
+console.log(myArr);
+console.log(myArr.length);
+
+let emptyArr = myArr.slice();
+console.log(emptyArr);
+console.log(myArr);
+
+let strngArr = ["Hello", "World", "JavaScript", "Arrays"];
+let strngRem = strngArr.splice(2, 1, "Python");
+let strngRem2 = strngArr.splice(0, 1, "Welcome");
+let addMore = strngArr.splice(0, 0, "Hi", "How", "are", "You");
+console.log(strngRem2);
+console.log(strngRem);
+console.log(strngArr);
+
+let copyArr = [...strngArr];
+console.log(copyArr);
+let slicingCopy = strngArr.slice();
+console.log(slicingCopy);
+let mergeArr = [].concat(strngArr);
+console.log(mergeArr);
+
+let analyse = copyArr.indexOf("Python") !== -1;
+console.log(analyse); //output : true
+
+let watchArr = copyArr.includes("World");
+console.log(watchArr);
+
+strngArr.unshift("God is great");
+console.log(strngArr);
+
