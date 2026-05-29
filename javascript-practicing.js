@@ -76,3 +76,147 @@ console.log(remainingProperties);
 
 //In JavaScript, there are several ways to check if an object has a specific property. Understanding these methods is important for working effectively with objects, especially when you're dealing with data from external sources or when you need to ensure certain properties exist before using them.
 console.log("Hello world!");
+
+const person6 = {
+    name: "William",
+    age: 35
+};
+console.log(person6.hasOwnProperty("name"));
+console.log(person6.hasOwnProperty("Job"));
+
+const person7 = {
+    name: "Emily",
+    age: 28
+};
+console.log(person7.hasOwnProperty("Job"));
+console.log(person7.hasOwnProperty("name"));
+//hasownmethod
+console.log(Object.hasOwn(person7, "name"));
+console.log(Object.hasOwn(person7, "Job"));
+
+const user = {
+    username: "coder123",
+    score: 0,
+    isActive: false,
+    nickname: null
+};
+console.log(Object.hasOwn(user, "score"));
+console.log(Object.hasOwn(user, "isActive"));
+console.log(Object.hasOwn(user, "nickname"));
+console.log(Object.hasOwn(user, "email"));
+
+if (user.score) {
+    console.log("Has score");
+} 
+if (Object.hasOwn(user, "score")) {
+    console.log("Has score:", user.score);
+}
+
+//Another way to check of rht existence of a property in an object is to use the in operator. like hasOwnProperty(), the in operatro will return true if the property exists on the object. 
+const person8 = {
+    name: "bob",
+    age: 40
+};
+console.log("name" in person8);
+console.log("Job" in person8);
+console.log("tostring" in person8);
+
+const person9 = {
+    name: "harry",
+    age: 30,
+    job: "developer"
+};
+
+console.log("name" in person9);
+console.log(Object.hasOwn(person9, "job"));
+
+//How do you wrok with accessing properties from nested objects and arrays in objects?
+//When working with javascript, uou'll often encuouter complex data structures that invlove nested objects and arrays within objects. THes structures can represent rich, hierarchical data, and they also require careful handling when accessing their properties.
+
+const person10 = {
+    name: "Peter",
+    age: 30,
+    contact: {
+        email: "peter@example.com",
+        phone: {
+            home: "123-456-7890",
+            work: "987-654-3210"
+        }
+    }
+};
+console.log(person10.contact.phone.work);
+console.log(person10.contact.email);
+console.log(person10.contact.phone.home);
+
+//You can also use bracket notation to access nested properties, which is especially.
+
+console.log(person10["contact"]["phone"]["work"]);
+
+//Primitive data types are the simplest form of data in JavaScript. They include number, bigint, string, boolean, null, undefined, and symbol. These types are called "primitive" because they represent single values and are not objects.
+
+let num1 = 10;
+let num2 = num1;
+num1 = 20;
+console.log(num2);
+
+//non-primitive data types, such as objects and arrays, are more complex and can store multiple values. When you assign a non-primitive value to a variable, you're actually assigning a reference to that value in memory. This means that if you change the value through one variable, it will affect all variables that reference the same object.
+const originalPerson = {name: "Alan", age: 30};
+const copiedPerson = originalPerson;
+copiedPerson.age = 35;
+console.log(originalPerson.age); //output: 35
+
+//function - are the resuable blocks of code that perform a specific task.
+function greett(name11) {
+    return "Hello, " + name11 + "!";
+}
+console.log(greett("Alice"));
+console.log(greett("Parker"));
+
+//Objects methods, on the other hand, are function that are associated with an object. They are defined as properties of an object and can access and manipulate the object's data. Here's an example of an object with a method:
+const person11 = {
+    name: "Andrew",
+    age: 40,
+    sayHello: function() {
+        return "Hello, my name is " + this.name + " and my age is " + this.age + "Years old!";
+    }
+};
+console.log(person11.sayHello());
+
+const user1 = {
+    username1: "Alex",
+    age: 50,
+    city: "China",
+    sayWords: function() {
+        return "Hey guys, He is " + this.username1 + " and he is coming from " + this.city;
+    }
+};
+console.log(user1.sayWords());
+
+//object constructor
+const num10 = 42;
+const numObj = Object(num10);
+
+console.log(num10);
+console.log(numObj);
+console.log(typeof numObj);
+
+const newObj = new Object(undefined);
+console.log(newObj);
+
+
+function toObject(value) {
+if (value === null || value === undefined) {
+    return {};
+}
+if (typeof value === "object") {
+    return value;
+}
+
+return Object(value);
+
+}
+
+console.log(toObject(null));
+console.log(toObject(true));
+console.log(toObject([1, 2, 3,]));
+
