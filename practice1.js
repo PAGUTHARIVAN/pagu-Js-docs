@@ -108,3 +108,5 @@ function weather(degree) {
 };
 
 console.log(weather(10));
+
+
