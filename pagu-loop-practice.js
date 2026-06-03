@@ -181,3 +181,124 @@ console.log(ince);
 let help = 100;
 let help1 = '10';
 console.log(help + help1);
+
+
+
+let price = 2500;
+let discount = 200;
+let finalPrice = price - discount;
+console.log(finalPrice);
+
+//add or even checker
+
+function evenOrAddChecker(num) {
+    if (num % 2 === 0) {
+        return `The ${num} is Even number!`;
+    } else {
+        return `The ${num} is Odd number`;
+    }
+};
+
+console.log(evenOrAddChecker(11));
+
+//Attendance percentage checker
+const attendanceChecker = (daysPresented) => {
+    if (daysPresented) {
+        return `This is your Attendence percentage : ${(daysPresented / 90 * 100).toFixed(2) + '%'}`;
+    } else {
+        return 'Please enter your presented days!';
+    }
+};
+
+console.log(attendanceChecker(80));
+
+//Js Objects
+const userMe = {
+    name: 'Pagu',
+    age: 21,
+    course: 'Economics'
+};
+console.log(userMe);
+
+//How to create the object
+const newUser = {
+    name: 'Pagu',
+    age: 21,
+    location: 'NewYork'
+};
+console.log(newUser);
+
+const accessingTheObject = newUser?.location;
+console.log(accessingTheObject);
+
+const accessingTheObjectWithBracket = newUser["age"];
+console.log(accessingTheObjectWithBracket);
+
+newUser.name = 'Rockstar';
+console.log(newUser);
+//New property add
+newUser.favfood = 'Biriyani';
+console.log(newUser);
+
+delete newUser.age;
+console.log(newUser);
+
+//Accesing the arrays in objects
+
+const oobject = new Object();
+
+oobject.skills = ["Python", "Java", "Rust", "JavaScript"];
+console.log(oobject);
+
+console.log(oobject.skills[2]);
+
+
+delete oobject.skills;
+console.log(oobject);
+
+//Accessing the nested object
+
+const creatObj = {
+    name: 'pagutharivan',
+    age: 21,
+    city: 'Newyork',
+    performance: 'Good',
+    personalDetails: {
+        email: 'pagutharivan',
+        phone: 123456788,
+        pincode: 624801
+    }
+};
+
+console.log(creatObj);
+//Accessing the objects
+
+const accessFullObj = creatObj?.personalDetails?.pincode;
+const successed = `The ${accessFullObj} is Successfully Accessed!!`; // It is accessing the pincode
+console.log(successed)
+
+//Object method;
+const userNew = {
+    name: 'pagu',
+    greet: function () {
+        console.log(`Hello world I am ${this.name}`);
+    }
+};
+
+userNew.greet();
+
+//for in loop method is usefull to accessing the objects in JavaScript
+const creatObbj = {
+    name: 'pagu',
+    age: 21,
+    location: 'Tokyo Japan'
+};
+
+console.log(Object.keys(creatObbj));
+console.log(Object.values(creatObbj));
+console.log(Object.entries(creatObbj));
+
+for (let key in creatObbj) {
+    console.log(key + ": " + creatObbj[key]);
+}
+
