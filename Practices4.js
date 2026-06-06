@@ -1,72 +1,19 @@
-const emptyArr = new Array(5);
-emptyArr[0] = 'Hello';
-emptyArr[1] = 'World';
-emptyArr[4] = 'JavaScript';
-emptyArr[2] = 'Web';
-emptyArr[3] = 'Dev';
-console.log(emptyArr);
+const arrName = ['Pagutharivan'];
+const arrLast = ['S'];
+const unpack = arrName[0] + " " + arrLast[0];
+const upcase = unpack.toUpperCase();
+console.log(upcase);
 
-console.log(emptyArr.length);
+const tostring = arrName.toString();
+console.log(tostring);
 
-const lengthArray = Array.from({length: 10});
-console.log(lengthArray);
+const findMiddle = tostring[6].toUpperCase();
+console.log(findMiddle);
 
-lengthArray[8] = 'Js';
-lengthArray[7] = 'Rust';
-lengthArray[0] = 'Java';
-lengthArray[1] = 'Kotlin';
-lengthArray[2] = 'Cpp';
-lengthArray[3] = 'Node.js'
-lengthArray[4] = 'Ruby';
-lengthArray[5] = 'Lua';
-lengthArray[6] = 'Assembly';
-lengthArray[9] = 'C';
-console.log(lengthArray); 
-
-const filling = new Array(10).fill('Pagu');
-console.log(filling);
-
-//linters
-function longFunction(
-     argument1,
-     argument2,
-     argument3
-) {
-    return argument1 + argument2 + argument3;
-}
-
-console.log(longFunction(1,2,3));
-
-//JavaScript closures
-
-function outerFunction(x) {
-    let y = 10;
-    function innerFunction() {
-        console.log(x + y);
-    }
-    return innerFunction;
-}
-
-let closure = outerFunction(10);
-console.log(closure());
-//
-
-function createCounter() {
-    let count = 0;
-    return function () {
-        count++;
-        return count;
-    };
-}
-
-let counter = createCounter();
-console.log(counter());
-
-function multiply(x) {
-    return function(y) {
-        return x * y;
-    };
-}
-
-let double = multiply(10);
-console.log(double(4));
+const first = arrName.toString();
+const slice = first.slice(0, 6);
+const sliceLast = first.slice(7, 12);
+console.log(slice);
+const combinesName = slice + findMiddle + sliceLast;
+console.log(sliceLast);
+console.log(combinesName);
