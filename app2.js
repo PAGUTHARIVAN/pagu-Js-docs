@@ -258,7 +258,8 @@ console.log(square(100, 50));
 
 (function () {
     console.log('I runs Immediately!');
-}) ();
+}) (); //IIFE Immediately invoked function expression (IIFE)
+
 
 
 
