@@ -94,3 +94,7 @@ const emailHider6 = (email6) => {
 }
 const email6 = 'helloworld@gmail.com';
 console.log(emailHider6(email6));
+
+
+import { addition } from "./fundamental.js";
+console.log(addition(100, 200));
