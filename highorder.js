@@ -1,180 +1,458 @@
-const numbers = [100, 200, 300, 400, 500];
-const doubled = numbers.map((num) => num * 2);
-console.log(doubled);
 
-const adding = doubled.map((element) => {
-    console.log("Element:", element);
-    return element * 2;
-});
 
-const newd = doubled.map((element, index) => {
-    console.log("Element:", element);
-    console.log("Index:", index);
-    return element * 2;
-});
+const numbers = [10, 20, 30, 30, 40, 50];
+const finder = numbers.find((num) => num > 20);
+console.log(finder);
 
-const numbers1 = [100, 200, 300, 400, 500].map((element, index) => {
-    console.log("Element:", element);
-    console.log("Index:", index);
-    return element * 2;
+const users = [
+    { id: 101, name: "Arun", role: "Admin" },
+    { id: 102, name: "Karthick", role: "User" },
+    { id: 103, name: "Siva", role: "User1" }
+];
 
-})
+const targetuser = users.find(user => user.id === 103);
+console.log(targetuser);
 
-//The third argument is the array where map is being called on
-const nums1 = [10, 20, 30, 40, 50, 60].map((element, index, array) => {
-    console.log("Element:", element);
-    console.log("Index:", index);
-    console.log("Array:", array);
-    return element * 2;
-});
+const fruits = ['mango', 'orange', 'grapes'];
+const arrf = fruits.find((item) => item === 'grapes');
+console.log(arrf);
 
-//Filter method
-//The filter method is used to create a new array with elements that pass a specified test, making it useful for selectively extracting items based on criteria
+const users1 = {
+    ...users
+}
+console.log(users1);
 
-//In this example, we are using the filter method,, to create a new array of only even numbers:
-const numbers5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evenNumbers = numbers5.filter((num) => num % 2 === 0);
-console.log(evenNumbers);
+const arrm = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arrmath = arrm.map(num => num * num);
+console.log(arrmath);
 
-const numbers6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const oddNumbers = numbers6.filter((num) => num % 2 === 1);
-console.log(oddNumbers);
+const filer = arrm.filter(num => num > 5);
+console.log(filer);
 
-const numbers7 = [2, 4, 6, 8, 10].filter((num) => num % 2);
-console.log(numbers7);
-const numbers8 = [1, 3, 5, 7, 9].filter((num) => num % 1);
-console.log(numbers8);
+const reducer = arrm.reduce((acc, curr) => {
+    return acc + curr;
+}, 0);
+console.log(reducer);
 
-//Removing the younger peoples from the array of objects
- const developers = [
-    { name: "Alice", age: 25, job: "SoftwareDeveloper" },
-    { name: "Bob", age: 30, job: "SoftwareDeveloper" },
-    { name: "Charlie", age: 35, job: "Data Analyst" },
-    { name: "David", age: 25, job: "Software Engineer" }
- ];
+const analy = arrm.includes(10);
+console.log(analy);
 
- const youngPeople = developers.filter((person) => person.age < 30);
- console.log(youngPeople);
+const arraysOfFruits = ['mango', 'orange', 'grapes', 'cherry', 'pineapple'];
+const arrff = arraysOfFruits.includes('orange');
+console.log(arrff);
 
- const sameAgePeople = developers.filter((person) => person.age === 25);
- console.log(sameAgePeople);
+const person = {
+    name: 'pagu',
+    age: 21,
+    city: 'tokyo',
+    phone: 6374995922,
+    sayHello: function () {
+        console.log(this.name);
+    }
+}
 
- const sameJobRole = developers.filter((person) => person.job === "SoftwareDeveloper");
- console.log(sameJobRole);
+const { name, age, city, phone, sayHello } = person;
+console.log(name);
+console.log(age);
+console.log(city);
+console.log(phone);
+const a = person.sayHello();
 
- //What is the Reduce Method, and How does it work?
- /* The reduce method is a function in JavaScript that allows you to process an array and condense it into a single value. This single value can be a number, a string, an object, or even another array.
- 
- It's called reduce beaxuse it reduces an array to s single outpu. While it might seem complicated at first understanding reduce can greatly simplify your code in many situations.
- 
- At its core reduce works by applying a function to each element in the order, passing the result of each calculation on to the next. This function is often called the reducer function.
- 
- The reducer function takes two main parameters: an accumulator and the current value. The accumulator is where you stre the running result of your operation, and the current value is the array element being processed.
- */
+const user5 = {
+    ...person,
+    email: 'pagutharivan@gmail.com'
+}
+console.log(user5);
 
-const numberss = [1, 2, 3, 4, 5];
-const sum = numbers.reduce(
-    (accumulator, currentValue) => accumulator + currentValue, 
-    0
-);
+//control flows
+//Javascript switch statement
 
-console.log(sum);
+let day = 3;
+let dayName;
 
-const numericals = [10, 20, 30, 40, 50];
-const sums = numericals.reduce(
-    (accumulator, currentValue) => accumulator + currentValue, 0
-);
-console.log(sums);
+switch (day) {
+    case 1:
+        dayName = 'Monday';
+        break;
+    case 2:
+        dayName = 'Tuesday';
+        break;
+    case 3:
+        dayName = 'Wednesday';
+        break;
+    case 4:
+        dayName = 'Thursday';
+        break;
+    case 5:
+        dayName = 'Friday';
+        break;
+    case 6:
+        dayName = 'Saturday';
+        break;
+    case 7:
+        dayName = 'Sunday';
+        break;
+    default:
+        dayName = 'Invalid day';
+}
 
-//What is Method Chaining, and How Does it work?
-/* Nethod chaining is a technique where you call several methods one after. You can use method chaining on many types of values in JavaScript including strings, arrays, and objects. Even though strings are primitive values, JavaScript temporarily wraps them in a string object when you use a string method.*/
+console.log(dayName);
 
-//Using string methods
-const result = "  Hello, World!  "
-  .trim()
-  .toLowerCase()
-  .replace("world", "JavaScript");
+let grade = 'B';
+let result;
+
+switch (grade) {
+    case 'A':
+    case 'B':
+    case 'C':
+        result = 'Grade is good';
+        break;
+    case 'D':
+        result = 'Grade is Poor';
+        break;
+    default:
+        result = 'No grades achieved';
+}
 
 console.log(result);
 
-const rever = "  pagutharivan  "
-  .trim()
-  .toUpperCase()
-  .split("")
-  .reverse()
-  .join("")
-console.log(rever);
 
-const reverAgain = rever
-  .split("")
-  .reverse()
-  .join("")
-  .toLowerCase()
-console.log(reverAgain);
+const userMain = {
+    name: 'Arun',
+    age: 28,
+    skills: ["JavaScript", "React"],
+    isActive: true
+};
 
-const numsi = "  1 23 4567  89 10"
-  .trim()
-  .split("")
-  .join("")
-console.log(numsi);
+const jsonstring = JSON.stringify(userMain);
+console.log(jsonstring);
 
-let myName = "pagutharivan";
-let firstL = myName.charAt(0).toUpperCase();
-let remove = myName.slice(1);
-console.log(remove);
-console.log(firstL);
+const formatedJson = JSON.stringify(userMain, null, 10);
+console.log(formatedJson);
 
-let combine = firstL + remove;
-console.log(combine);
+const userer = {
+    name: 'pagu',
+    age: 21,
+    city: 'Berlin',
+    email: 'pagutharivan@gmail.com'
+}
+const changeThistoJson = JSON.stringify(userer, null, 2);
+console.log(changeThistoJson);
 
-const transactions = [
-    { amount: 100, type: "credit" },
-    { amount: 20, type: "cash" },
-    { amount: 150, type: "credit" },
-    { amount: 50, type: "cash" },
-    { amount: 75, type: "credit" }
-];
+const toParsing = JSON.parse(changeThistoJson, function (key, value) {
+    if (key === "age") {
+        return value;
+    }
+});
+console.log(toParsing);
 
-const totalCreditWithBonus = transactions
- .filter((transaction) => transaction.type === "credit")
- .map((transaction) => transaction.amount * 1.1)
- .reduce((sum, amount) => sum + amount, 0)
+//create Array using literal
+let arrp = new Array(10, 20, 30);
+console.log(arrp);
+//Use the array literal method for efficiency readabiltiy and speed
 
-console.log(totalCreditWithBonus);
+let ae = ["HTML", "CSS", "JS"];
+console.log(ae[0], ae[1], ae[2]); //accessing elements of an array
 
-const calculator = {
-    total: 0,
-    add(n) {
-        this.total += n;
-        return this;
-    },
+const arraysOfSkills = ['Music', 'Drawing', 'Painting', 'Dancing', 'Singing'];
+console.log(arraysOfSkills.length);
+console.log(`First Item : ${arraysOfSkills[0]}`);
+console.log(`Last Item : ${arraysOfSkills[arraysOfSkills.length - 1]}`);
 
-    multiply(n) {
-        this.total *= n;
-        return this;
-    },
+//Modifying the Arrays
+let createArr = ['React', 'Angular', 'Vue'];
+createArr[0] = 'Next.Js';
+createArr[1] = 'Node.Js';
+createArr[2] = 'Express.Js';
+createArr[3] = 'Maven Java';
+createArr[4] = 'Kotlin';
+createArr[5] = 'Typescript';
+console.log(createArr.length);
 
-    subtract(n) {
-        this.total -= n;
-        return this;
-    },
+let createArr1 = [];
 
-    getResult() {
-        return this.total;
+let pushing = createArr1.push('Python', 'Kotlin', 'Rust');
+console.log(createArr1);
+
+let pushOnf = createArr1.unshift('C', 'Cpp', 'Ruby');
+console.log(createArr1);
+
+//Removing elements from the Array
+//To remove the elements from an array we have different methods like pop(), shift(), or splice().
+//The pop() method removes an element from the last index of the array.
+//The shift() method removes the elment from the first index of the arrya
+// The splice() method removes or replaces the element from the array.
+
+let orginalArr = ['HTML', 'CSS', 'JS'];
+let lst = orginalArr.pop();
+console.log(`After Removing the last: ` + orginalArr);
+let fst = orginalArr.shift();
+console.log(`After Removing the first : ${orginalArr}`);
+
+orginalArr.splice(1, 1);
+console.log(`After Removing 2 elements starting from index 1: ` + orginalArr);
+
+
+const orginArr = ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'NODEJS', 'EXPRESSJS', 'MONGODB', 'NEXTJS'];
+orginArr.splice(3, 1, 'TAILWINDCSS');
+console.log(orginArr);
+//for loop
+for (let c = 0; c < orginArr.length; c++) {
+    console.log(orginArr[c].toLowerCase());
+}
+//foreach loop
+orginArr.forEach(function myfunc(x) {
+    console.log(x);
+
+})
+
+//Array concatenation
+//combine two ro more arrays using the concat() method. It returns new array containing joined array elements.
+
+//creating an Array and Initializing with values.
+const arrOfCon = ['Kotlin', 'Css', 'Js', 'React'];
+const arrOfCon1 = ['Node.js', 'Express.js'];
+
+//concate both arrays
+const joint = arrOfCon.concat(arrOfCon1);
+console.log(joint);
+
+const concate = [...joint];
+console.log('Rested Array : ', concate);
+
+const conv = concate.toString();
+console.log(`The stringed version of the array : ${conv}`);
+
+console.log(typeof conv);
+
+console.log(Array.isArray(concate));
+
+//Objects in Javascript 
+// An object is a dynamic data structure that store related data as key-value pairs, where each key uniquely indentifies its value.
+//The values of properties can be primitves, objects, or functions (known as methods when defined inside an object).
+//Objects are mutable and dynamic properties can be added, modified, or deleted at any time.
+//Objects allow data grouping and encapsulation, making it easier to manage related information and behaviour together.
+
+//creation using object literal
+let obj = {
+    name: 'Pagutharivan',
+    age: 21,
+    job: 'Developer'
+};
+
+console.log(obj);
+
+//Using object constructor for object creation
+let obj1 = new Object();
+obj1.name = 'Pagu';
+obj1.age = 21;
+obj1.city = 'LosAngeles';
+obj1.phone = 6374995922;
+console.log(obj1);
+
+//Accessing object properties you can use either dot notation or bracket notation.
+console.log(obj1['name']);
+console.log(obj1['age']);
+console.log(obj1['city']);
+console.log(obj1['phone']);
+
+console.log(obj.name);
+console.log(obj.age);
+console.log(obj.job);
+
+//create new obj with object literal
+
+const objectn = {
+    name: 'pagutharivan',
+    age: 21,
+    city: 'Morroco',
+    phone: 6374995922,
+    email: 'pagutharivan@gmail.com'
+}
+
+console.log(objectn);
+
+objectn.name = 'Antony';
+console.log(objectn);
+
+objectn.favcolor = 'Black';
+
+for (const [key, values] of Object.entries(objectn)) {
+    console.log(`${key} : ${values}`);
+}
+
+console.log(objectn);
+
+delete objectn.favcolor;
+console.log(objectn);
+
+const propChecking = objectn.hasOwnProperty('name');
+const propCA = objectn.hasOwnProperty('age');
+const propci = objectn.hasOwnProperty('city');
+const propp = objectn.hasOwnProperty('phone');
+const prope = objectn.hasOwnProperty('email');
+console.log(propChecking);
+console.log(propCA);
+console.log(propci);
+console.log(propp);
+console.log(prope);
+console.log('name' in objectn);
+
+console.log(Object.hasOwn(objectn, 'name'));
+
+for (const key of Object.keys(objectn)) {
+    console.log(key);
+}
+
+//Merging two objects into one
+
+const object3 = {
+    ...obj,
+    ...obj1
+};
+
+console.log(object3);
+console.log(Object.keys(object3).length);
+
+//Recogninzing the Javascript objects
+console.log(typeof object3 === 'object' && object3 !== null);
+if (typeof object3 === 'object' && object3 !== null) {
+    console.log('This is pure object');
+} else {
+    console.log('good!');
+}
+
+//Javascript strings methods
+//1. slice method
+let w = 'Geeks for Geeks';
+console.log(w.length);
+
+let letterCount = 0;
+const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+for (let l = 0; l < w.length; l++) {
+    let char = w[l];
+
+    if (letters.includes(char)) {
+        letterCount++;
+        
+    }
+    console.log(`The total letter count is : ${letterCount}`);
+
+};
+
+let word = 'pagutharivan is a cool guy';
+let wslice = word.slice(0, 1);
+let wslice1 = word.slice(1);
+
+let changeOne = wslice.toUpperCase();
+console.log(wslice);
+console.log(wslice1);
+
+console.log(changeOne);
+const comb = changeOne + wslice1;
+console.log(comb);
+
+//substring ()
+let str2 = "Mind, Power, Soul";
+let part = str2.substring(6, 11);
+console.log(part);
+
+const cuttingName = 'pagutharivan';
+const firstL = cuttingName.slice(0, 1).toUpperCase();
+const remainsing = cuttingName.substring(1);
+console.log(remainsing);
+
+let combin = firstL + remainsing;
+console.log(combin);
+
+let sentence = 'How are you Javascript';
+console.log(sentence.indexOf("J"));
+
+const st = sentence.substring(12);
+console.log(st);
+
+let question = 'What you want?';
+const qr = question.replaceAll("you", "Java");
+console.log(qr);
+
+//Padstart
+//padstart() pad a string with another string until it reaches the given length. The padding is applied from the left end of the string.
+let stone = 'soul';
+stone = stone.padStart(9, "Mind");
+console.log(stone);
+
+const person4 = {
+    name: 'pagu',
+    age: 21,
+    job4: 'developer',
+    personald: {
+        emailp: 'pagutharivan@gmail.com',
+        phonep: 6374995922,
+        pincodep: 624801,
+        address: {
+            city4: 'chennai',
+            country4: 'India'
+        }
     }
 };
 
-const result8 = calculator.add(5).multiply(2).subtract(3).getResult();
-console.log(result8);
+console.log(person4);
 
-//How does the sort method work?
-//There are many different ways to sort your data in programming. In this lesson, we will focus on the built-in sort method in JavaScript. The sort method is used to arrange the elements of an array and returns a reference to the sorted array. No copy is made because the elements are sorted in place.
+//object destructuring
+const { name4, age4, job4, personald: {emailp, phonep, pincodep, address: {city4, country4}}} = person4;
+console.log(country4);
 
-const fruits = ["Banana", "Orange", "Apple", "Grapes"];
-fruits.sort();
+for (const [key, value] of Object.entries(person4)) {
+    console.log(`${key} : ${value}`);
+}
 
-console.log(fruits);
+function interateWithEntries(obj) {
+    Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value === 'object' && value !== null) {
+            interateWithEntries(value);
+        } else {
+            console.log(`${key} : ${value}`);
+        }
+    });
+}
 
-const numbersof = [414, 200, 5, 10, 3];
-numbersof.sort();
-console.log(numbersof);
+interateWithEntries(person4);
+
+//again 
+const objectCracker = (obj) => {
+    Object.entries(obj).forEach(([key, value]) => {
+        if ( typeof value === 'object' && value !== null) {
+            objectCracker(value);
+        } else {
+            console.log(`${key} : ${value}`);
+        }
+    });
+};
+
+
+const obj10 = {
+    personN: 'Pagutharivan',
+    personAge: 21,
+    personPh: 6374995922,
+    personCi: 'Tokyo'
+};
+
+console.log(obj10);
+
+const simpleCracker = (obj) => {
+    Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value === 'object' && value !== null) {
+            simpleCracker(value);
+        } else {
+            console.log(`${key} : ${value}`);
+        }
+    });
+};
+simpleCracker(obj10);
+
+let pusarr = {};
+for (const key of Object.keys(obj10)) {
+    pusarr.items = key;
+}
+console.log(pusarr);
