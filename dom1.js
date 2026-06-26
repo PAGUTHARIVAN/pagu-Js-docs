@@ -1,12 +1,16 @@
-const add = document.getElementById('add');
-const container = document.querySelector('#container');
-console.log(add);
+const result = document.getElementById('result');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
 
-add.addEventListener('click', () => {
-    //create element
-    const h1 = document.createElement('h1');
-    h1.textContent = 'Hello';
-    h1.style.backgroundColor = 'yellow';
-    container.append(h1); 
-
+btn1.addEventListener('click', () => {
+    result.textContent = btn1.textContent;
 });
+
+btn2.addEventListener('click', () => {
+    result.textContent = btn2.textContent;
+});
+
+btn3.addEventListener('click', () => {
+    result.textContent = btn3.textContent;
+})
