@@ -1,14 +1,12 @@
 const add = document.getElementById('add');
-
+const container = document.querySelector('#container');
 console.log(add);
 
 add.addEventListener('click', () => {
-    const div = document.createElement('div');
-    div.setAttribute('id', 'container');
-    div.textContent = 'Hello';
-    div.style.backgroundColor = 'yellow';
-    div.style.padding = '10px 20px'
-    div.style.margin = '10px';
-    document.body.appendChild(div);
+    //create element
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Hello';
+    h1.style.backgroundColor = 'yellow';
+    container.append(h1); 
 
 });
