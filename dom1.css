@@ -1,0 +1,81 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(245, 240, 240, 0.851);
+}
+
+#container {
+    background-color: yellow;
+    width: 410px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;   
+}
+
+.title h4 {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+.inputfield {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputfield input {
+    width: 65%;
+    padding: 5px 10px;
+    border-radius: 9px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.inputfield #add {
+    padding: 4px 9px;
+    border-radius: 10px;
+    border: none;
+}
+
+.inputfield #clear {
+    padding: 4px 9px;
+    border-radius: 10px;
+    border: none;
+}
+
+#main #listitems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#listitems #lists {
+    width: 75%;
+}
+
+#lists li {
+    list-style: none;
+    font-size: 0.9rem;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+

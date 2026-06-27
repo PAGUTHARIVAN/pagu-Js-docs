@@ -3,17 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>TodoList</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="dom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--TASK ONE-->
-    <input type="text" id="input">
-    <div id="contain">
-        <h2 id="result">Result: </h2>
+    <!--TodoList for Favourited Programming Languages-->
+    <div class="container">
+        <div class="title-wrapper">
+            <h2>Favourite Programming Languages</h2>
+        </div>
+
+        <!--Input fields: Input, add-btn, Clear-field-->
+        <div class="input-field-wrapper">
+            <input type="text" id="inputlangs" placeholder="Enter Your Fav Language"> 
+            <div class="input-btns-wrapper">
+                <button id="add-btn">Add</button> <!--for Dom-->
+                <button id="clear-field">Clear</button>
+            </div>
+          
+        </div>
+
+        <!--Items Wrapper: Lists, delete btns-->
+        <div class="items-wrapper">
+            <div id="lists">
+                <div class="list">
+                    <li>Js is Default</li>
+                </div>
+
+            </div>
+
+
+            <div id="dbtn-list">
+                <div class="btn">
+                    <button>Delete</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
     
+
     <script src="dom.js"></script>
 </body>
 </html>
