@@ -1,28 +1,16 @@
-export const counter = () => {
+const createCounter = () => {
     let count = 0;
 
-    const inner = () => {
+    const increment = () => {
         count++;
-        console.log(count);
+        return count;
     }
-    return inner;
-};
 
-export const user = {
-    name: 'pagu',
-    age: 21,
-    work: 'softwareEngineer',
-    city: 'Berlin'
-};
-
-const pi = 3.14159;
-
-function add2(a, b) {
-    return a + b;
+    return increment;
 }
 
-function subtract(a, b) {
-    return a - b;
-}
+const counter1 = createCounter();
+const counter2 = createCounter();
 
-export { pi, add2, subtract };
+console.log(counter1());
+console.log(counter2());
