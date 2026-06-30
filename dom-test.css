@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+
+.card {
+    width: 500px;
+    background-color: gray;
+    margin: 30px auto;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#input {
+    width: 80%;
+    padding: 4px 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#add {
+    color: whitesmoke;
+    border: none;
+    background-color: gray;
+}
+
+#clear {
+    border: none;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list li {
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.304);
+    width: 88%;
+    font-size: 0.9rem;
+    padding: 4px 15px;
+    border-radius: 10px;
+}
+
+.list #dele {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    background-color: gray;
+    border: none;
+}
+
